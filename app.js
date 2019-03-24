@@ -7,4 +7,4 @@ app.get('/', function(req, res) {
   res.render('index');
 });
 
-app.listen(5500);
+app.listen(port);
