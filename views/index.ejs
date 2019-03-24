@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>RESTful Routes</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+      integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+      integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body class="container">
+    <header class="jumbotron">
+      <h1><strong>RESTful Routes</strong></h1>
+      <h2>A table of all 7 RESTful routes</h2>
+    </header>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Path</th>
+          <th>HTTP Verb</th>
+          <th>Purpose</th>
+          <th>Mongoose Method</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Index</td>
+          <td>/users</td>
+          <td>GET</td>
+          <td>List all users</td>
+          <td>User.find()</td>
+        </tr>
+        <tr class="table-success">
+          <td>New</td>
+          <td>/users/new</td>
+          <td>GET</td>
+          <td>Show new user form</td>
+          <td>N/A</td>
+        </tr>
+        <tr class="table-success">
+          <td>Create</td>
+          <td>/users</td>
+          <td>POST</td>
+          <td>Create a new user, then redirect somewhere</td>
+          <td>User.create()</td>
+        </tr>
+        <tr class="table-primary">
+          <td>Show</td>
+          <td>/users/:id</td>
+          <td>GET</td>
+          <td>Show info about one specific user</td>
+          <td>User.findById()</td>
+        </tr>
+        <tr class="table-warning">
+          <td>Edit</td>
+          <td>/users/:id/edit</td>
+          <td>GET</td>
+          <td>Show edit form for one user</td>
+          <td>User.fundById()</td>
+        </tr>
+        <tr class="table-warning">
+          <td>Update</td>
+          <td>/users/:id</td>
+          <td>PUT</td>
+          <td>Update a particular user, then redirect somewhere</td>
+          <td>User.findByIdAndUpdate()</td>
+        </tr>
+        <tr class="table-danger">
+          <td>Destroy</td>
+          <td>/users/:id</td>
+          <td>DELETE</td>
+          <td>Delete a particular user, then redirect somewhere</td>
+          <td>User.findByIdAndRemove()</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>
